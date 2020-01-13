@@ -1,0 +1,37 @@
+.product{
+    padding: 20px;
+}
+.productContent{
+    padding: 20px 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.productHeader{
+    text-align: right;
+}
+.ant-card{
+    margin:0 30px 20px 0!important;
+    border: 1px solid #000;
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 10px !important;
+    transition: all 0.2s; /* 所有的属性变化在0.5s的时间段内完成 */
+    word-break: break-word;
+    word-wrap: break-word
+}
+.ant-card:hover{
+  transform: scale(1.05); /* 鼠标放到图片上的时候图片按比例放大1.5倍   */
+}
+.topBottom{
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.anticon-delete svg:hover{
+  color:red
+}
+// .productContent .ant-card-bordered{
+//   border: 1px solid rgb(158, 224, 224);
+// }
