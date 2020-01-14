@@ -1,13 +1,15 @@
 .product{
-    padding: 20px;
+    padding: 20px 100px 20px 100px;
+    background:url("../../static//3.jpg")
 }
-.productContent{
+.product-content{
     padding: 20px 0;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+
 }
-.productHeader{
+.product-header{
     text-align: right;
 }
 .ant-card{
@@ -23,15 +25,18 @@
 .ant-card:hover{
   transform: scale(1.05); /* 鼠标放到图片上的时候图片按比例放大1.5倍   */
 }
-.topBottom{
+.product-top-bottom{
   min-height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 .anticon-delete svg:hover{
   color:red
 }
-// .productContent .ant-card-bordered{
-//   border: 1px solid rgb(158, 224, 224);
-// }
+.product-loading{
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+}

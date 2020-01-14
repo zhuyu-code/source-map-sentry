@@ -1,0 +1,43 @@
+.project{
+  padding: 20px 100px 20px 100px;
+}
+.project-content{
+  padding: 20px 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+}
+.project-header{
+  text-align: right;
+}
+.ant-card{
+  margin:0 30px 20px 0!important;
+  border: 1px solid #000;
+  margin: 50px auto;
+  overflow: hidden;
+  border-radius: 10px !important;
+  transition: all 0.2s; /* 所有的属性变化在0.5s的时间段内完成 */
+  word-break: break-word;
+  word-wrap: break-word
+}
+.ant-card:hover{
+transform: scale(1.05); /* 鼠标放到图片上的时候图片按比例放大1.5倍   */
+}
+.project-top-bottom{
+min-height: 600px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+position: relative;
+}
+.anticon-delete svg:hover{
+color:red
+}
+.project-loading,.project-empty{
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+bottom: 50%;
+transform: translateX(-50%);
+}

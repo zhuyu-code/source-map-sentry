@@ -1,6 +1,6 @@
 import React ,{useEffect,useState, useCallback} from 'react';
 import './index.less'
-import { Card, Pagination} from 'antd';
+import { Card, Pagination,Icon,Spin} from 'antd';
 import { observer } from 'mobx-react-lite';
 import {useProductStore} from './store/index';
 import {getProductList} from '../../api/index'
@@ -12,13 +12,14 @@ import { Link } from 'react-router-dom';
 const { Meta } = Card;
 export default observer(()=>{
     const {setProductLists,getProductLists,setTotal,getTotal,setPage,setPageSize,getPage,getPageSize}=useProductStore();
+    const [isLoading, setisLoading] = useState(true)
     const query = useCallback(
         (page = 1,pageSize = 10) => {
               const userInfo=JSON.parse(localStorage.getItem('userInfo'));
               getProductList({userId:userInfo.userId,page:page,pageSize:pageSize}).then(res=>{
-                console.log(res.data);
                 setTotal(res.data.total)
                 setProductLists(res.data.list);
+                setisLoading(!isLoading);
             })
         },
         [],
@@ -26,6 +27,7 @@ export default observer(()=>{
     useEffect(() => {
       query();
     },[]);
+
 
 
     function onShowSizeChange(current, pageSize){
@@ -37,9 +39,13 @@ export default observer(()=>{
       <div className='product'>
        <AddProduct query={query}/>
        <SearchProduct page={getPage()} pageSize={getPageSize()}/>
-       <div className="topBottom">
-       <div className="productContent">
-        {
+       <div className="product-top-bottom">
+       <div className="product-content">
+        { isLoading ?
+        <div className="product-loading">
+           <Spin tip="Loading...">
+          </Spin>
+        </div>:
             getProductLists().map(res=>{
                 return (
                     <Card

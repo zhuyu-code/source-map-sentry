@@ -32,7 +32,7 @@ const { Option } = Select;
         setVisible(false)
       };
     return (
-        <div className="productHeader">
+        <div className="product-header">
         <Button type="primary" onClick={showModal}>
         <Icon type="file-add" />
          新建产品

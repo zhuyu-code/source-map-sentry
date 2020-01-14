@@ -18,7 +18,7 @@ const Login= ((props)=>{
               localStorage.setItem('token',data.token);
               localStorage.setItem('userInfo',JSON.stringify(data.data));
               message.success(data.message);
-              history.replace('/main');
+              history.replace('/home');
             }else{
               message.error(data.msg);
             }

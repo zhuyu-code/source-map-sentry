@@ -1,8 +1,9 @@
 import React,{ useEffect } from 'react';
 import {observer} from 'mobx-react-lite';
-import { Card} from 'antd';
+import { Card, Empty} from 'antd';
 import { Link } from 'react-router-dom';
 import { useLocation} from "react-router";
+import "./index.less"
 import {useVersionStore} from './store/index';
 import {getVersionList} from '../../api/index';
 const {Meta} =Card;
@@ -21,9 +22,11 @@ export default observer((props)=>{
       },[]);
 
       return (
-        <div className='product'>
-        <div className="productContent">
+        <div className='version'>
+        <div className="version-content">
+
         {
+          getVersionLists().length==0?<div className="version-empty"><Empty/></div>:
             getVersionLists().map(res=>{
                 return (
                     <Card

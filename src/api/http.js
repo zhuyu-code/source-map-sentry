@@ -7,7 +7,7 @@ const instance = axios.create({
     headers:{
         'Content-Type':'application/json;charset=utf-8',
     },
-    // timeout: 10000,   // 超时5秒
+    timeout: 10000,   // 超时5秒
 });
 
 instance.interceptors.request.use(config => {

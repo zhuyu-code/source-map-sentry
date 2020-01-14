@@ -3,13 +3,15 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ProtectedRoute from '../utils/protectdRoute'
 import SubRouter from './router'
 import Login from '../components/login/index';
-import Register from '../components/register/index'
+import Register from '../components/register/index';
+import Home from '../components/home/Home';
 export default (() => {
   const [count,setCount]=useState(0);
     return (
         <Fragment>
             <Router>
                 <Switch>
+                  <Route path="/home" component={Home}/>
                   <Route path="/login" component={Login}/>
                   <Route path="/register" component={Register}/>
                   <ProtectedRoute  path="/" Component={SubRouter}></ProtectedRoute>
