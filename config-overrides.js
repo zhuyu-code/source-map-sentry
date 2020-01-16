@@ -1,17 +1,13 @@
-// eslint-disable-next-line no-undef
-const { override,addLessLoader,fixBabelImports, addDecoratorsLegacy } = require('customize-cra');
-// eslint-disable-next-line no-undef
+const { override, fixBabelImports, addLessLoader } = require('customize-cra');
+
 module.exports = override(
-    addDecoratorsLegacy(),
+    fixBabelImports('import', {
+        libraryName: 'antd',
+        libraryDirectory: 'es',
+        style: true,
+    }),
     addLessLoader({
-      javascriptEnabled:true,
-      modifyVars:{
-        // "@primary-color":"#0ff"
-      }
-      }),
-      fixBabelImports("import",{
-        "libraryName":"antd",
-        "libraryDirectory":"es",
-        "style":true
-      })
+        javascriptEnabled: true,
+        // modifyVars: { '@primary-color': '#1DA57A' },
+    }),
 );

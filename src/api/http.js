@@ -3,7 +3,7 @@ import axios from 'axios';
 import { message } from 'antd'
 
 const instance = axios.create({
-    baseURL: 'http://122.51.175.158:7001',  // 基础domain
+    baseURL: 'http://127.0.0.1:7001',  // 基础domain
     headers:{
         'Content-Type':'application/json;charset=utf-8',
     },
@@ -65,8 +65,11 @@ export default class http{
     static async deleteProduct(url){
         return await instance.delete(url);
     }
+    static async getProjectOne(url){
+      return await instance.get(url);
+    }
     static async getProjectList(url,params){
-        return await instance.get(url,params);
+        return await instance.get(url,{params:params});
     }
     static async addProject(url,data){
         return await instance.post(url,data);

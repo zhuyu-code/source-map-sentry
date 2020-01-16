@@ -1,12 +1,12 @@
+.project-title{
+  margin-top: 20px;
+}
 .project{
-  padding: 20px 100px 20px 100px;
+  padding: 10px 40px 20px 100px;
+  min-height: 600px;
 }
 .project-content{
   padding: 20px 0;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-
 }
 .project-header{
   text-align: right;
@@ -31,13 +31,76 @@ flex-direction: column;
 justify-content: space-between;
 position: relative;
 }
-.anticon-delete svg:hover{
-color:red
-}
+// .anticon-delete svg:hover{
+// color:red
+// }
 .project-loading,.project-empty{
 position: absolute;
 left: 50%;
 transform: translateX(-50%);
 bottom: 50%;
 transform: translateX(-50%);
+}
+.project-content .ant-card-body{
+  text-align:center;
+  color:white;
+  font-size:16px;
+}
+.project-add-item{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.project-addproject-item{
+  width: 240px;
+  height: 169px;
+  border-radius: 10px;
+  text-align: center;
+  border:1px dashed #d4d8db;
+  background-color: #e5e9ec;
+}
+.project-addproject-item:hover{
+  background-color: #ffffff;
+}
+.project-addproject-item svg{
+  margin-top: 40px;
+  color:#d4d8db;
+  width: 50px;
+  height: 50px;
+}
+.project-addproject-item div{
+  margin-top: 10px;
+  font-size: 16px;
+  color: #616d71;
+}
+.project-delete:hover{
+  color: red;
+}
+.radio1 .ant-radio-inner{
+  background-color: #56b8eb!important;
+}
+.radio2 .ant-radio-inner{
+  background-color: #f28033!important;
+}
+.radio3 .ant-radio-inner{
+  background-color: #ebc656!important;
+}
+.radio4 .ant-radio-inner{
+  background-color: #a2d148!important;
+}
+.radio5 .ant-radio-inner{
+  background-color: #a2d148!important;
+}
+.radio6 .ant-radio-inner{
+  background-color: #e85b72!important;
+}
+.radio7 .ant-radio-inner{
+  background-color: #7461c2!important;
+}
+.ant-radio-checked .ant-radio-inner::after{
+
+  background-color: #fff;
+}
+.ant-radio-checked .ant-radio-inner{
+  border-color: #fff!important;
 }

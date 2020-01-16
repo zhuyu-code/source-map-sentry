@@ -12,7 +12,8 @@ export const updateProduct=(params,productId)=>http.updateProduct(`/product/${pr
 export const deleteProduct=(productId)=>http.deleteProduct(`/product/${productId}`);
 
 //项目信息
-export const getProjectList=(productId)=>http.getProjectList(`/product/${productId}/project`);
+export const getProjectOne=(projectId)=>http.getProjectOne(`/project/${projectId}`);
+export const getProjectList=(productId,params)=>http.getProjectList(`/product/${productId}/project`,params);
 export const addProject=(data,productId,params)=>http.addProject(`/product/${productId}/project/?userId=${params.userId}&createPerson=${params.createPerson}`,data);
 export const updateProject=(params,projectId)=>http.updateProject(`/product/project/${projectId}`,params);
 export const deleteProject=(projectId)=>http.deleteProject(`/product/project/${projectId}`);

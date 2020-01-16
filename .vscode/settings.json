@@ -1,0 +1,10 @@
+{
+    "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+    "wrap_line_length": 120,
+    "wrap_attributes": "auto",
+    "end_with_newline": false
+    }
+    },
+    "vetur.format.defaultFormatter.html": "js-beautify-html",
+}
