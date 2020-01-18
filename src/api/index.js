@@ -22,5 +22,8 @@ export const deleteProject=(projectId)=>http.deleteProject(`/product/project/${p
 export const getVersionList=(projectId)=>http.getVersionList(`/product/project/${projectId}/version`);
 
 //错误列表
-export const getErrorList=(versionId)=>http.getErrorList(`/product/project/version/${versionId}/errorList`);
+export const getProjectIdError=(projectId)=>http.getProjectIdError(`/product/project/${projectId}/errorList`)
+export const getVersionIdError=(versionId)=>http.getVersionIdError(`/product/project/version/${versionId}/errorList`);
 
+//错误统计
+export const getDateError=(projectId,params)=>http.getDateError(`/product/project/${projectId}/date`,params)

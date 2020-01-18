@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { observer } from "mobx-react-lite";
 import { useLocation } from "react-router-dom";
-import { Select } from "antd";
+import { Select,Icon } from "antd";
 import { getProjectList } from "../../api/index";
 import { useProjectDetailStore } from "./store/index";
 import history from "../../utils/history";
@@ -39,6 +39,7 @@ export default observer((props) => {
       <div className="project-detail-select">
         <Select
           style={{ width: 240 }}
+          suffixIcon={<Icon type="down" />}
           value={getTargetProject()}
           onChange={selectChange}
         >

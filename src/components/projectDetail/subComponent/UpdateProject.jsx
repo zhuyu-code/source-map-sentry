@@ -20,8 +20,6 @@ const NormalLoginForm = observer(props => {
   const location = useLocation();
   const { getFieldDecorator } = props.form;
   const {
-    setProjectLists,
-    getProjectLists,
     setProject,
     getProject
   } = useProjectDetailStore();

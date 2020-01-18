@@ -7,7 +7,7 @@ const text = <span>编辑产品</span>;
 const NormalLoginForm = props => {
   const { getFieldDecorator } = props.form;
   const [visible, setVisible] = useState(false);
-  const [option, setOption] = useState([
+  const [option] = useState([
     "WEB",
     "React Native",
     "安卓",

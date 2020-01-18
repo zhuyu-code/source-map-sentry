@@ -3,7 +3,7 @@ import { observer } from "mobx-react-lite";
 import './index.less'
 import ProjectDetailSelect from './ProjectDetailSelect';
 import ProjectDetailTab from './ProjectDetailTab'
-import { Route } from "react-router-dom";
+import { Switch,Route } from "react-router-dom";
 import UpdateProject from './subComponent/UpdateProject';
 import SentryProject from './subComponent/SentryProject';
 import StatisticsProject from './subComponent/StatisticsProject';
@@ -17,10 +17,13 @@ export default observer((props) => {
         <ProjectDetailTab/>
       </div>
       <div className="project-detail-content">
-        <Route path="/product/:productId/project/:projectId/projectDetail" component={UpdateProject}/>
+
+        <Switch>
         <Route path="/product/:productId/project/:projectId/projectDetail/sentry" component={SentryProject}/>
         <Route path="/product/:productId/project/:projectId/projectDetail/statistics" component={StatisticsProject}/>
         <Route path="/product/:productId/project/:projectId/projectDetail/wiki" component={WikiProject}/>
+        <Route path="/product/:productId/project/:projectId/projectDetail" component={UpdateProject}/>
+        </Switch>
       </div>
     </Fragment>
   );

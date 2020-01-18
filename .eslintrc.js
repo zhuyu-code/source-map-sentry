@@ -4,7 +4,6 @@ module.exports = {
         "es6": true
     },
     "extends": [
-        "react-app",
-        "@campus/eslint-config-campus/js"
+        "react-app"
     ]
 };

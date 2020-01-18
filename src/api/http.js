@@ -83,9 +83,13 @@ export default class http{
     static async getVersionList(url){
         return await instance.get(url);
     }
-    static async getErrorList(url){
+    static async getProjectIdError(url){
+      return await instance.get(url)
+    }
+    static async getVersionIdError(url){
         return await instance.get(url);
     }
-
-
+    static async getDateError(url,params){
+      return await instance.get(url,{params:params})
+    }
 }

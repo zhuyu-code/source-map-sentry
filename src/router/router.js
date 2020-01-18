@@ -7,8 +7,6 @@ import './router.less'
 import history from '../utils/history'
 import Product from '../components/product/index';
 import Project from '../components/project/index';
-import Version from '../components/version/index';
-import ErrorList from '../components/error/index';
 import projectDetail from '../components/projectDetail/index'
 
 const { Header, Content, Footer } = Layout;
@@ -79,7 +77,6 @@ export default (()=>{
             <Route exact path="/product" component={Product}/>
             <Route path="/product/:productId/project/:projectId/projectDetail" component={projectDetail}/>
             <Route path="/product/:productId/project" component={Project}/>
-            <Route path="/product/project/version/:versionId/errorList" component={ErrorList}/>
             <Redirect to='/product'></Redirect>
            </Switch>
           </Content>
