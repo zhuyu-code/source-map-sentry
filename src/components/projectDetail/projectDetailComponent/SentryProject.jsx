@@ -1,7 +1,7 @@
 import React,{useEffect} from "react";
 import { observer } from "mobx-react-lite";
-import SentryTable from "./sentryComponent/SentryTable";
-import SentrySelect from './sentryComponent/SentrySelect'
+import SentryTable from "./sentryProject/SentryTable";
+import SentrySelect from './sentryProject/SentrySelect'
 export default observer(props => {
 
   return (

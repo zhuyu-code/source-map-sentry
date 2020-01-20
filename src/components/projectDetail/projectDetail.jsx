@@ -4,10 +4,10 @@ import './index.less'
 import ProjectDetailSelect from './ProjectDetailSelect';
 import ProjectDetailTab from './ProjectDetailTab'
 import { Switch,Route } from "react-router-dom";
-import UpdateProject from './subComponent/UpdateProject';
-import SentryProject from './subComponent/SentryProject';
-import StatisticsProject from './subComponent/StatisticsProject';
-import WikiProject from './subComponent/WikiProject'
+import UpdateProject from './projectDetailComponent/UpdateProject';
+import SentryProject from './projectDetailComponent/SentryProject';
+import StatisticsProject from './projectDetailComponent/StatisticsProject';
+import WikiProject from './projectDetailComponent/WikiProject'
 
 export default observer((props) => {
   return (

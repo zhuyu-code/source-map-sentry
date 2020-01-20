@@ -27,3 +27,7 @@ export const getVersionIdError=(versionId)=>http.getVersionIdError(`/product/pro
 
 //错误统计
 export const getDateError=(projectId,params)=>http.getDateError(`/product/project/${projectId}/date`,params)
+
+//富文本
+export const getEditor=(projectId)=>http.getEditor(`/product/project/${projectId}/editor`)
+export const uploadEditor=(projectId,data)=>http.uploadEditor(`/product/project/${projectId}/editor`,data)
